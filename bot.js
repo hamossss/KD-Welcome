@@ -73,7 +73,7 @@ client.on("guildMemberAdd", member => {
                               ctx.fontSize = '28px';
                               ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
-   ctx.fillText(` Welcome TO KD CLAN ${member.guild.name} ` , 200, 190);
+   ctx.fillText(` Welcome TO  ${member.guild.name}CLAN ` , 200, 190);
    
    
 
@@ -110,7 +110,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "⚔𝕂𝕀ℕ𝔾𝔻𝕆𝕄 𝕆𝔽 𝔻𝔼𝔸𝕋ℍ⚔")
+        guild = client.guilds.find("name", "Game Over")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -132,7 +132,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "⚔𝕂𝕀ℕ𝔾𝔻𝕆𝕄 𝕆𝔽 𝔻𝔼𝔸𝕋ℍ⚔")
+        guild = client.guilds.find("name", "Game Over")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
