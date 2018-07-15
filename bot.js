@@ -16,7 +16,7 @@ client.on('message', message => {
 const fs = require('fs');
 client.on("guildMemberAdd", member => {
       
-      const welcomer = member.guild.channels.find("name","chat"); //اسم روم
+      const welcomer = member.guild.channels.find("name","s7q"); //اسم روم
                 
       var Canvas = require('canvas')
       var jimp = require('jimp')
@@ -85,7 +85,7 @@ client.on("guildMemberAdd", member => {
 
 const moment = require('moment');
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","chat");
+let welcomer = member.guild.channels.find("name","s7q");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -110,7 +110,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "Game Over")
+        guild = client.guilds.find("name", "CLAN S7Q")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -132,7 +132,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "Game Over")
+        guild = client.guilds.find("name", "CLAN S7Q")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -141,7 +141,7 @@ client.on("guildMemberAdd", (member) => {
                     console.log(3);
                     console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
     
-    channel.send(`**GR نورت كلان  = >** ${member}`)     
+    channel.send(`**S7Q نورت كلان  = >** ${member}`)     
     channel.send(`**Invited by = >** ${Invite.inviter}`)     
              
  }
@@ -150,6 +150,22 @@ client.on("guildMemberAdd", (member) => {
     })
 });
 
+
+
+client.on('guildMemberRemove', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`خرج عضو`)
+    .setDescription(`**اقفل الباب وراك**`)
+    .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+    .setColor('RED')
+    .setFooter(`S7Q Bot`, '')
+
+var channel =member.guild.channels.find('name', 's7q')
+if (!channel) return;
+channel.send({embed : embed});
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
