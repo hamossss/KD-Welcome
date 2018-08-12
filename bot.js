@@ -288,7 +288,7 @@ var prefix = "$";
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
 
-if (message.content.startsWith(prefix + 'امر تغيير الاسم')) {
+if (message.content.startsWith(prefix + 'nic')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم `)
   return message.reply("**تم تغيير الاسم البوت بنجاح **");
