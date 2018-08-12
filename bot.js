@@ -219,13 +219,13 @@ function play(guild, song) {
 
 const devs = ['466425075487342615' , '466425075487342615' , '' , ''];
 client.on('message', message => {
-var prefix = "البرفركس";
+var prefix = "$";
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
 
-if (message.content.startsWith(prefix + 'امر تغيير الاسم')) {
+if (message.content.startsWith(prefix + 'nic')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم ?`)
   return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
