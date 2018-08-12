@@ -218,7 +218,7 @@ function play(guild, song) {
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
 const adminprefix = "$vip";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const devs = ['274923685985386496'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+const devs = ['466425075487342615'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -263,23 +263,5 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }
    }); 
 
-const devs = ['466425075487342615' , '466425075487342615' , '' , ''];
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-
-if (message.content.startsWith(prefix + 'nic')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم `)
-  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
-} else
-if (message.content.startsWith(prefix + 'pic')) {
-  client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
-
-}
-});
    
 client.login(process.env.BOT_TOKEN);
