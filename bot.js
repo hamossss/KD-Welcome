@@ -227,8 +227,8 @@ var prefix = "$";
 
 if (message.content.startsWith(prefix + 'nic')) {
   client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم ?`)
-  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
+      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم `)
+  return message.reply("**تم تغيير الاسم البوت بنجاح **");
 } else
 if (message.content.startsWith(prefix + 'امر تغيير الصورة')) {
   client.user.setAvatar(argresult);
