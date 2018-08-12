@@ -217,26 +217,6 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
-const devs = ['466425075487342615' , '466425075487342615' , '' , ''];
-client.on('message', message => {
-var prefix = "$";
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-
-if (message.content.startsWith(prefix + 'nic')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم `)
-  return message.reply("**تم تغيير الاسم البوت بنجاح **");
-} else
-if (message.content.startsWith(prefix + 'امر تغيير الصورة')) {
-  client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
-
-}
-});
-
 client.on("message", message => {
  if (message.content === `${prefix}help`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -256,6 +236,35 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
     
    }
    }); 
+client.on('message', msg => {
+  if (msg.content === 'حمو') {
+    msg.reply('**`` لو ما رد كلمو خاص``:rose:**');
+  }
+});
 
+
+client.on('message', msg => {
+  if (msg.content === 'يا حمو') {
+    msg.reply('**`` لو ما رد كلمو خاص``:rose:**');
+  }
+});
+
+client.on('ready', function(){    
+    var ms = 40000 ;    
+    var setGame = ['الملك يا ولد','حمو'];    
+    var i = -1;    
+    var j = 0;    
+    setInterval(function (){    
+        if( i == -1 ){    
+j = 1;    
+       }    
+        if( i == (setGame.length)-1 ){    
+            j = -1;    
+      }    
+       i = i+j;    
+        client.user.setGame(setGame[i],`http://www.youtube.com/gg`);    
+}, ms);    
+    
+});
    
 client.login(process.env.BOT_TOKEN);
