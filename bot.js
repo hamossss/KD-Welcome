@@ -263,6 +263,23 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }
    }); 
 
+const devs = ['466425075487342615' , '466425075487342615' , '' , ''];
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
 
+if (message.content.startsWith(prefix + 'nic')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم `)
+  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
+} else
+if (message.content.startsWith(prefix + 'pic')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
+
+}
+});
    
 client.login(process.env.BOT_TOKEN);
